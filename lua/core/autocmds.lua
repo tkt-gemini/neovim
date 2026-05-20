@@ -4,9 +4,10 @@
 -- local autocmd = vim.api.nvim_create_autocmd
 
 vim.api.nvim_create_autocmd('FileType', {
-  -- pattern = { 'rust', 'javascript', 'zig', 'python', 'lua', 'markdown', 'quarto' },
-  callback = function()
-    vim.treesitter.start()
-    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+  callback = function(args)
+    pcall(vim.treesitter.start, args.buf)
+    pcall(function()
+      vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end)
   end,
 })
