@@ -1,32 +1,10 @@
 
 
-Error in FileType Autocommands for "*":
-Lua callback: .../neovim/0.12.2/share/nvim/runtime/lua/vim/treesitter.lua:449: Parser could not be created for buffer 4 and language "TelescopePrompt"
-stack traceback:
-	[C]: in function 'assert'
-	.../neovim/0.12.2/share/nvim/runtime/lua/vim/treesitter.lua:449: in function 'start'
-	/home/tkt31/.config/nvim/lua/core/autocmds.lua:9: in function </home/tkt31/.config/nvim/lua/core/autocmds.lua:8>
-	[C]: in function 'resume'
-	...share/nvim/lazy/plenary.nvim/lua/plenary/async/async.lua:45: in function 'step'
-	...share/nvim/lazy/plenary.nvim/lua/plenary/async/async.lua:48: in function 'execute'
-	...share/nvim/lazy/plenary.nvim/lua/plenary/async/async.lua:118: in function 'main_loop'
-	...share/nvim/lazy/telescope.nvim/lua/telescope/pickers.lua:743: in function 'find'
-	...im/lazy/telescope.nvim/lua/telescope/builtin/__files.lua:397: in function 'v'
-	...im/lazy/telescope.nvim/lua/telescope/builtin/__files.lua:640: in function 'v'
-	.../nvim/lazy/telescope.nvim/lua/telescope/builtin/init.lua:587: in function <.../nvim/lazy/telescope.nvim/lua/telescope/builtin/init.lua:546>
-	...share/nvim/lazy/telescope.nvim/lua/telescope/command.lua:191: in function 'run_command'
-	...share/nvim/lazy/telescope.nvim/lua/telescope/command.lua:262: in function 'load_command'
-	...ocal/share/nvim/lazy/telescope.nvim/plugin/telescope.lua:108: in function <...ocal/share/nvim/lazy/telescope.nvim/plugin/telescope.lua:107>
-Lua callback: .../neovim/0.12.2/share/nvim/runtime/lua/vim/treesitter.lua:449: Parser could not be created for buffer 2 and language "TelescopeResults"
-stack traceback:
-	[C]: in function 'assert'
-	.../neovim/0.12.2/share/nvim/runtime/lua/vim/treesitter.lua:449: in function 'start'
-	/home/tkt31/.config/nvim/lua/core/autocmds.lua:9: in function </home/tkt31/.config/nvim/lua/core/autocmds.lua:8>
-	[C]: in function 'resume'
-	...share/nvim/lazy/plenary.nvim/lua/plenary/async/async.lua:45: in function 'step'
-	...share/nvim/lazy/plenary.nvim/lua/plenary/async/async.lua:48: in function 'execute'
-	...share/nvim/lazy/plenary.nvim/lua/plenary/async/async.lua:118: in function 'main_loop'
-	...share/nvim/lazy/telescope.nvim/lua/telescope/pickers.lua:743: in function 'find'
-	...im/lazy/telescope.nvim/lua/telescope/builtin/__files.lua:397: in function 'v'
-	...im/lazy/telescope.nvim/lua/telescope/builtin/__files.lua:640: in function 'v'
+Failed to run `config` for nvim-lspconfig
 
+/home/tkt31/.config/nvim/lua/plugins/lsp.lua:38: attempt to call field 'setup_handlers' (a nil value)
+
+# stacktrace:
+  - lua/plugins/lsp.lua:38 _in_ **config**
+  - lua/core/lazy.lua:17
+  - init.lua:8

@@ -5,7 +5,7 @@ local themes = {
 		repo = "folke/tokyonight.nvim",
 		opts = {
 			style = "storm",
-			-- transparent = true,
+			transparent = true,
 			styles = {
 				comments = { italic = true },
 				keywords = { italic = true },
