@@ -144,8 +144,11 @@ return {
 	-- Sidebar
 	{
 		"nvim-tree/nvim-tree.lua",
-		opts = {
-		},
+		opts = {},
+    keys = {
+      { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle file explorer" },
+      { "<leader>o", "<cmd>NvimTreeFocus<CR>", desc = "Focus file explorer" },
+    },
 		config = function(_, opts)
 			require("nvim-tree").setup(opts)
 		end,

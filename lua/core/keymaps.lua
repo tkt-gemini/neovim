@@ -9,10 +9,6 @@ keymap("n", "<C-Down>", "<cmd>resize +2<CR>", { desc = "Increase window height" 
 keymap("n", "<C-Left>", "<cmd>vertical resize -2<CR>", { desc = "Decrease window width" })
 keymap("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Increase window width" })
 
--- nvim-tree keymaps
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
-keymap("n", "<leader>o", "<cmd>NvimTreeFocus<CR>", { desc = "Focus file explorer" })
-
 -- Buffer
 keymap("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
 keymap("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
@@ -43,19 +39,6 @@ keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
-
--- molten keymap
-keymap("n", "<leader>mi", "<cmd>MoltenInit<CR>", { desc = "Molten: Initialize Kernel" })
-keymap("n", "<leader>md", "<cmd>MoltenDeinit<CR>", { desc = "Molten: De-initialize" })
-keymap("n", "<leader>mI", "<cmd>MoltenInterrupt<CR>", { desc = "Molten: Interrupt Kernel" })
-keymap("n", "<leader>mr", "<cmd>MoltenEvaluateOperator<cr>", { desc = "Molten: Run (Operator)" })
-keymap("v", "<leader>mr", "<cmd>MoltenEvaluateVisual<cr>", { desc = "Molten: Run Selection" })
-keymap("n", "<leader>ml", "<cmd>MoltenEvaluateLine<cr>", { desc = "Molten: Run Line" })
-keymap("n", "<leader>mR", "<cmd>MoltenReevaluateCell<cr>", { desc = "Molten: Re-run active cell" })
-keymap("n", "<leader>mo", "<cmd>MoltenShowOutput<CR>", { desc = "Molten: Show Output" })
-keymap("n", "<leader>mh", "<cmd>MoltenHideOutput<CR>", { desc = "Molten: Hide Output" })
-keymap("n", "<leader>mn", "<cmd>MoltenNext<CR>", { desc = "Molten: Next Cell" })
-keymap("n", "<leader>mp", "<cmd>MoltenPrev<CR>", { desc = "Molten: Previous Cell" })
 
 -- Control windows
 keymap("n", "<C-h>", "<C-w>h", { desc = "Window Left" })

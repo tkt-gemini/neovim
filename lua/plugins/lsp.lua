@@ -4,6 +4,7 @@ return {
     "williamboman/mason.nvim",
     opts = { ui = { border = "rounded" } },
   },
+
   {
     "williamboman/mason-lspconfig.nvim",
     dependencies = { "mason.nvim" },
@@ -11,6 +12,7 @@ return {
       ensure_installed = { "lua_ls", "pyright", "clangd" },
     },
   },
+
   {
     "neovim/nvim-lspconfig",
     dependencies = {
