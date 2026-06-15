@@ -25,10 +25,12 @@ lspconfig:                                                                  ✅
 - Skipped. This healthcheck is redundant with `:checkhealth vim.lsp`.
 
 ==============================================================================
-mason:                                                                   10 ⚠️
+mason:                                                                   11 ⚠️
 
 mason.nvim ~
-- ✅ OK mason.nvim version v2.2.1
+- ⚠️ WARNING mason.nvim version v2.2.1
+  - ADVICE:
+    - The latest version of mason.nvim is: v2.3.1
 - ✅ OK PATH: prepend
 - ✅ OK Providers: 
     mason.providers.registry-api
@@ -36,7 +38,7 @@ mason.nvim ~
 - ✅ OK neovim version >= 0.10.0
 
 mason.nvim [Registries] ~
-- ✅ OK Registry `github.com/mason-org/mason-registry version: 2026-05-20-windy-story` is installed.
+- ✅ OK Registry `github.com/mason-org/mason-registry version: 2026-06-15-used-ferry` is installed.
 - ✅ OK Registry `SynthesizedRegistrySource` is installed.
 
 mason.nvim [Core utils] ~
@@ -91,8 +93,8 @@ mason.nvim [Languages] ~
   - ADVICE:
     - spawn: python3 failed with exit code 1 and signal 0. /usr/bin/python3: No module named pip
 
-- ✅ OK npm: `11.12.1`
 - ✅ OK python venv: `Ok`
+- ✅ OK npm: `11.12.1`
 
 ==============================================================================
 mason-lspconfig:                                                            ✅
@@ -115,9 +117,9 @@ Requirements ~
   Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM PSL SPNEGO SSL threadsafe TLS-SRP UnixSockets zstd
 
 OS Info ~
-- version: #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025
-- machine: x86_64
 - sysname: Linux
+- machine: x86_64
+- version: #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025
 - release: 6.6.114.1-microsoft-standard-WSL2
 
 Install directory for parsers and queries ~
@@ -143,19 +145,47 @@ vim.deprecated:                                                             ✅
 - ✅ OK No deprecated functions detected
 
 ==============================================================================
-vim.health:                                                               1 ❌
+vim.health:                                                               1 ⚠️
 
 System Info ~
-- ❌ ERROR Failed to run healthcheck for "vim.health" plugin. Exception:
-  ...ovim/0.12.2/share/nvim/runtime/lua/vim/health/health.lua:560: attempt to index local 'result' (a nil value)
+- ⚠️ WARNING Nvim 0.12.3 is available (current: 0.12.2)
+- Nvim version: `v0.12.2` 
+- Operating system: Linux 6.6.114.1-microsoft-standard-WSL2
+- Terminal: unknown
+- $TERM: xterm-256color
 
+Configuration ~
+- ✅ OK no issues found
+
+Runtime ~
+- ✅ OK $VIMRUNTIME: /home/tkt31/.local/share/mise/installs/github-neovim-neovim/0.12.2/share/nvim/runtime
+
+Performance ~
+- ✅ OK Build type: Release
+
+Remote Plugins ~
+- ✅ OK Up to date
+
+Terminal ~
+- key_backspace (kbs) terminfo entry: `key_backspace=\177`
+- key_dc (kdch1) terminfo entry: `key_dc=\E[3~`
+
+External Tools ~
+- ✅ OK ripgrep 15.1.0 (rev af60c2de9d) (/home/tkt31/.local/share/mise/installs/ripgrep/latest/ripgrep-15.1.0-x86_64-unknown-linux-musl/rg)
+- ✅ OK vim.ui.open: handler found (explorer.exe)
+- ✅ OK git version 2.53.0 (/usr/bin/git)
+- ✅ OK curl 8.18.0 (/usr/bin/curl)
+  curl 8.18.0 (x86_64-pc-linux-gnu) libcurl/8.18.0 OpenSSL/3.5.5 zlib/1.3.1 brotli/1.2.0 zstd/1.5.7 libidn2/2.3.8 libpsl/0.21.2 libssh2/1.11.1 nghttp2/1.68.0 librtmp/2.3 mit-krb5/1.22.1 OpenLDAP/2.6.10
+  Release-Date: 2026-01-07, security patched: 8.18.0-1ubuntu2.1
+  Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns ldap ldaps mqtt pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp ws wss
+  Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM PSL SPNEGO SSL threadsafe TLS-SRP UnixSockets zstd
 
 ==============================================================================
 vim.lsp:                                                                    ✅
 
 - LSP log level : WARN
 - Log path: /home/tkt31/.local/state/nvim/lsp.log
-- Log size: 3 KB
+- Log size: 2219 KB
 
 vim.lsp: Active Features ~
 
@@ -308,13 +338,19 @@ vim.pack: basics ~
 - ✅ OK `vim.pack` is not used
 
 ==============================================================================
-vim.provider:                                                             5 ⚠️
+vim.provider:                                                             6 ⚠️
 
 Clipboard (optional) ~
 - ✅ OK Clipboard tool found: xsel
 
 Node.js provider (optional) ~
-- Disabled (loaded_node_provider=0).
+- Node.js: 24.15.0
+- ⚠️ WARNING Missing "neovim" npm (or yarn, pnpm) package.
+  - ADVICE:
+    - Run in shell: npm install -g neovim
+    - Run in shell (if you use yarn): yarn global add neovim
+    - Run in shell (if you use pnpm): pnpm install -g neovim
+    - You may disable this provider (and warning) by adding `let g:loaded_node_provider = 0` to your init.vim
 
 Perl provider (optional) ~
 - ⚠️ WARNING "Neovim::Ext" cpan module is not installed
