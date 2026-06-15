@@ -57,6 +57,7 @@ return {
 	-- Bufferline
 	{
 		'akinsho/bufferline.nvim',
+    event = { "BufReadPre", "BufNewFile" },
 		version = "*",
 		dependencies = 'nvim-tree/nvim-web-devicons',
 		opts = {
@@ -82,6 +83,10 @@ return {
         },
       },
 		},
+    keys = {
+      { "<Tab>", "<cmd>BufferLineCycleNext<CR>", desc = "Next buffer" },
+      { "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", desc = "Previous buffer" },
+    },
 		config = function(_, opts)
 			require('bufferline').setup(opts)
 		end,

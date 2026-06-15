@@ -13,11 +13,6 @@ keymap("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Increase windo
 keymap("n", "<leader>sv", "<cmd>vsplit<CR>", { desc = "Split window vertically (Right)" })
 keymap("n", "<leader>sh", "<cmd>split<CR>", { desc = "Split window horizontally (Below)" })
 
--- Buffer
-keymap("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
-keymap("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
-keymap("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Close current buffer" })
-
 -- Clear search highlights
 keymap("n", "<leader>nh", "<cmd>nohl<CR>", { desc = "Clear search highlights" })
 
