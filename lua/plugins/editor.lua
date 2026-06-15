@@ -35,7 +35,7 @@ return {
       floating_window = false,
       hint_enable = true,
       hint_prefix = "🙀|",
-      toggle_key = '<C-k>',
+      toggle_key = '<C-s>',
     },
     config = function(_, opts)
       require('lsp_signature').setup(opts)
