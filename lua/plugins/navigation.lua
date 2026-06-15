@@ -22,7 +22,7 @@ return {
 		},
 		opts = {
 			defaults = {
-				selection_caret = '✨ ',
+				selection_caret = '😏 ',
 				prompt_prefix = '   ',
 				path_display = { 'smart' },
 				preview = {

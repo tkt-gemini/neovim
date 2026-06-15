@@ -9,6 +9,10 @@ keymap("n", "<C-Down>", "<cmd>resize +2<CR>", { desc = "Increase window height" 
 keymap("n", "<C-Left>", "<cmd>vertical resize -2<CR>", { desc = "Decrease window width" })
 keymap("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Increase window width" })
 
+-- Split windows
+keymap("n", "<leader>sv", "<cmd>vsplit<CR>", { desc = "Split window vertically (Right)" })
+keymap("n", "<leader>sh", "<cmd>split<CR>", { desc = "Split window horizontally (Below)" })
+
 -- Buffer
 keymap("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
 keymap("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Previous buffer" })

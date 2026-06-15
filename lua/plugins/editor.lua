@@ -34,7 +34,7 @@ return {
       bind = true,
       floating_window = false,
       hint_enable = true,
-      hint_prefix = "🙀|",
+      hint_prefix = "👻 <󰊕> ",
       toggle_key = '<C-s>',
     },
     config = function(_, opts)
