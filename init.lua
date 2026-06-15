@@ -4,7 +4,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-require("untils")
+require("utils")
 require("core.lazy")
 require("core.options")
 require("core.keymaps")

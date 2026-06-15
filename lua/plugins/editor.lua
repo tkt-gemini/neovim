@@ -14,12 +14,6 @@ return {
     config = true,
 	},
 
-	-- Git signs in sign column
-	{
-		"lewis6991/gitsigns.nvim",
-    config = true,
-	},
-
 	-- Indentation
 	{
 		"lukas-reineke/indent-blankline.nvim",
@@ -40,7 +34,7 @@ return {
       bind = true,
       floating_window = false,
       hint_enable = true,
-      hint_prefix = "🙀 ",
+      hint_prefix = "🙀|",
       toggle_key = '<C-k>',
     },
     config = function(_, opts)
