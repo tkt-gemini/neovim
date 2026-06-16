@@ -39,15 +39,12 @@ opt.splitbelow = true
 opt.clipboard = 'unnamedplus'
 
 -- Folding
-opt.foldmethod = 'expr'
-opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 opt.foldlevel = 99
 opt.foldlevelstart = 99
-opt.fillchars:append({
-    foldopen = "",
-    foldclose = "",
-    foldsep = "│",
-    fold = " ",
-})
-opt.foldcolumn = "1"
-opt.foldtext = 'v:lua.custom_foldtext()'
+-- opt.fillchars:append({
+--     foldopen = "",
+--     foldclose = "",
+--     foldsep = "│",
+--     fold = " ",
+-- })
+-- opt.foldcolumn = "1"

@@ -92,4 +92,37 @@ return {
 			require('bufferline').setup(opts)
 		end,
 	},
+
+  -- Folding
+  {
+    "chrisgrieser/nvim-origami",
+    event = "VeryLazy",
+    dependencies = { "lewis6991/gitsigns.nvim" },
+    opts = {
+      useLspFoldsWithTreesitterFallback = {
+        enabled = true,
+        foldmethodIfNeitherIsAvailable = "indent",
+      },
+      pauseFoldsOnSearch = true,
+      foldtext = {
+        enabled = true,
+        padding = {
+          character = " ",
+          width = 3,
+          hlgroup = nil,
+        },
+        lineCount = {
+          template = "(%d lines)",
+          hlgroup = "Comment",
+        },
+        gitsignsCount = true,
+        diagnosticsCount = true,
+      },
+      autoFold = {
+        enabled = true,
+        kinds = { "comment", "imports" },
+      },
+      foldKeymaps = { setup = false },
+    },
+  },
 }
