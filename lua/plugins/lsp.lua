@@ -27,16 +27,27 @@ return {
         pyright = {
           settings = {
             python = {
-              analysis = { typeCheckingMode = "basic", autoSearchPaths = true }
-            }
-          }
+              analysis = {
+                typeCheckingMode = "basic",
+                autoSearchPaths = true
+              },
+            },
+          },
         },
         clangd = {
-          cmd = { "clangd", "--background-index", "--clang-tidy" },
+          cmd = {
+            "clangd",
+            "--background-index",
+            "--clang-tidy",
+            "--completion-style=detailed",
+          },
         },
         lua_ls = {
           settings = {
-            Lua = { diagnostics = { globals = { "vim" } } },
+            Lua = {
+              diagnostics = { globals = { "vim" } },
+              hint = { enable = true },
+            },
           },
         },
       }
