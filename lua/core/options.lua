@@ -42,15 +42,12 @@ opt.clipboard = 'unnamedplus'
 opt.foldmethod = 'expr'
 opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 opt.foldlevel = 99
-opt.fillchars:append({ fold = ' ' })
+opt.foldlevelstart = 99
+opt.fillchars:append({
+    foldopen = "",
+    foldclose = "",
+    foldsep = "│",
+    fold = " ",
+})
+opt.foldcolumn = "1"
 opt.foldtext = 'v:lua.custom_foldtext()'
-
-function _G.custom_foldtext()
-  local firstLine = vim.fn.getline(vim.v.foldstart)
-  local lineCount = vim.v.foldend - vim.v.foldstart + 1
-  local icon = ''
-  local text = vim.fn.substitute(firstLine, [[^\s*]], '', '')
-  local final_text = string.format('%s %s...(%d lines)', icon, text, lineCount)
-
-  return final_text
-end
