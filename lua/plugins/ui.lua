@@ -15,7 +15,7 @@ return {
 					statusline = {},
 					winbar = {},
 				},
-        globalstatus = true,
+        globalstatus = vim.o.laststatus == 3,
 			},
 			sections = {
 				lualine_y = {},
