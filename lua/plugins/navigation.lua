@@ -61,15 +61,29 @@ return {
 	},
 
 	-- Sidebar
-	{
-		"nvim-tree/nvim-tree.lua",
-		opts = {},
-    keys = {
-      { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle file explorer" },
-      { "<leader>o", "<cmd>NvimTreeFocus<CR>", desc = "Focus file explorer" },
-    },
-		config = function(_, opts)
-			require("nvim-tree").setup(opts)
-		end,
+  {
+		"stevearc/oil.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {
+			default_file_explorer = true,
+      columns = {
+        "icon",
+        "size",
+        "mtime",
+      },
+			float = {
+				padding = 2,
+				max_width = 0.5,
+				max_height = 0.5,
+				border = "rounded",
+			},
+			view_options = {
+				show_hidden = true,
+			},
+      win_options = { wrap = true }
+		},
+		keys = {
+			{ "<leader>e", "<cmd>Oil --float<CR>", desc = "Toggle file explorer (Float)" },
+		},
 	},
 }
