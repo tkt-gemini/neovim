@@ -22,7 +22,7 @@ return {
 		},
 		opts = {
 			defaults = {
-				selection_caret = '😏 ',
+				selection_caret = '🙀 ',
 				prompt_prefix = '   ',
 				path_display = { 'smart' },
 				preview = {
@@ -36,11 +36,17 @@ return {
 					"build/",
 					"dist/",
 					"vendor/",
+          "__pycache__/",
+          "%.pyc",
+          "%.o",
+          "%.out",
+          "%.exe",
+          "%.cache/",
 				},
 			},
 		},
     keys = {
-      { "<leader>ff", "<CMD>Telescope find_files<CR>", desc = "Find Files" },
+      { "<leader>ff", "<CMD>Telescope find_files hidden=true<CR>", desc = "Find Files" },
       { "<leader>fg", "<CMD>Telescope live_grep<CR>", desc = "Live Grep" },
       { "<leader>fb", "<CMD>Telescope buffers<CR>", desc = "Find Buffers" },
       { "<leader>fh", "<CMD>Telescope help_tags<CR>", desc = "Help Tags" },
