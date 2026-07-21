@@ -36,9 +36,14 @@ local themes = {
       },
     },
   },
+
+  solarized = {
+    repo = "maxmx03/solarized.nvim",
+    opts = {},
+  },
 }
 
-local activeThemeName = "catppuccin"
+local activeThemeName = "solarized"
 local activeTheme = themes[activeThemeName]
 
 return {
