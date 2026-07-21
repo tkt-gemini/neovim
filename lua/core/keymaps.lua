@@ -44,3 +44,9 @@ keymap("n", "<C-h>", "<C-w>h", { desc = "Window Left" })
 keymap("n", "<C-l>", "<C-w>l", { desc = "Window Right" })
 keymap("n", "<C-j>", "<C-w>j", { desc = "Window Down" })
 keymap("n", "<C-k>", "<C-w>k", { desc = "Window Up" })
+
+keymap("n", "]d", vim.diagnostic.goto_next, { desc = "Next error" })
+keymap("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev error" })
+keymap("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Show details error" })
+keymap("n", "<leader>qd", vim.diagnostic.setqflist, { desc = "Open quickfix error" })
+
