@@ -1,18 +1,18 @@
 -- ~/.config/nvim/lua/plugins/editor.lua
 
 return {
-	-- Auto-close pairs
-	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		config = true,
-	},
-
-	-- Comment with `gcc` (line) or `gc` (motion)
-	{
-		"numToStr/Comment.nvim",
+  -- Auto-close pairs
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
     config = true,
-	},
+  },
+
+  -- Comment with `gcc` (line) or `gc` (motion)
+  {
+    "numToStr/Comment.nvim",
+    config = true,
+  },
 
   {
     "ojroques/nvim-bufdel",
@@ -22,18 +22,18 @@ return {
     },
   },
 
-	-- Indentation
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		opts = {
-			indent = {
-				char = "│",
-				tab_char = "│",
-			},
-			scope = { enabled = true },
-		},
-	},
+  -- Indentation
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {
+      indent = {
+        char = "│",
+        tab_char = "│",
+      },
+      scope = { enabled = true },
+    },
+  },
 
   {
     "ray-x/lsp_signature.nvim",

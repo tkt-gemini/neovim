@@ -42,9 +42,9 @@ opt.clipboard = 'unnamedplus'
 opt.foldlevel = 99
 opt.foldlevelstart = 99
 -- opt.fillchars:append({
---     foldopen = "",
---     foldclose = "",
---     foldsep = "│",
---     fold = " ",
+--   foldopen = "",
+--   foldclose = "",
+--   foldsep = "│",
+--   fold = " ",
 -- })
 -- opt.foldcolumn = "1"
