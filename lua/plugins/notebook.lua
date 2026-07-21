@@ -1,51 +1,32 @@
 -- ~/.config/nvim/lua/plugins/notebook.lua
 
 return {
-  -- {
-  --   "vhyrro/luarocks.nvim",
-  --   priority = 1001,
-  --   opts = {
-  --     rocks = { "magick" },
-  --   },
-  -- },
-  --
-  -- {
-  --   "3rd/image.nvim",
-  --   build = false,
-  --   opts = {
-  --     backend = "kitty", -- "kitty" or "ueberzug" or "sixel"
-  --     processor = "magick_cli", -- or "magick_rock"
-  --     max_width = nil,
-  --     max_height = nil,
-  --     max_width_window_percentage = nil,
-  --     max_height_window_percentage = 50,
-  --     scale_factor = 1.0,
-  --     window_overlap_clear_enabled = false, -- toggles images when windows are overlapped
-  --     window_overlap_clear_ft_ignore = { "cmp_menu", "cmp_docs", "snacks_notif", "scrollview", "scrollview_sign" },
-  --     editor_only_render_when_focused = false, -- auto show/hide images when the editor gains/looses focus
-  --     hijack_file_patterns = { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp", "*.avif" },
-  --   },
-  -- },
-  --
-  -- {
-  --   "ajbucci/ipynb.nvim",
-  --   dependencies = {
-  --     "nvim-treesitter/nvim-treesitter",
-  --     "neovim/nvim-lspconfig",
-  --     "nvim-tree/nvim-web-devicons", -- optional, for language icons
-  --     "folke/snacks.nvim", -- optional, for inline images
-  --   },
-  --   opts = {},
-  -- },
-  --
-  -- {
-  --   "folke/snacks.nvim",
-  --   dependencies = { "nvim-tree/nvim-web-devicons" },
-  --   priority = 1000,
-  --   lazy = false,
-  --   ---@type snacks.Config
-  --   opts = {
-  --     words = { enabled = true },
-  --   },
-  -- },
+  {
+    "ajbucci/ipynb.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "neovim/nvim-lspconfig",
+      "nvim-tree/nvim-web-devicons",
+      "folke/snacks.nvim",
+    },
+    ft = { "ipynb" },
+    opts = {},
+  },
+
+  {
+    "folke/snacks.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    priority = 1000,
+    lazy = false,
+    opts = {
+      words = { enabled = true },
+      image = {
+        enabled = true,
+        doc = {
+          inline = true,
+          float = false,
+        },
+      },
+    },
+  },
 }
